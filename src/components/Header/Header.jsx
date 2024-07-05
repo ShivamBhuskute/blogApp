@@ -290,11 +290,10 @@ function Header() {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className={`inline-block px-6 py-2 duration-200 rounded-full ${
-                      location.pathname === item.slug
+                    className={`inline-block px-6 py-2 duration-200 rounded-full ${location.pathname === item.slug
                         ? 'bg-blue-400 text-white' // Active link styles
                         : 'hover:bg-blue-100'
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </button>
@@ -309,11 +308,10 @@ function Header() {
             <li key="About">
               <button
                 onClick={() => navigate('/about')}
-                className={`inline-block px-6 py-2 duration-200 rounded-full ${
-                  location.pathname === '/about'
+                className={`inline-block px-6 py-2 duration-200 rounded-full ${location.pathname === '/about'
                     ? 'bg-blue-400 text-white' // Active link styles
                     : 'hover:bg-blue-100'
-                }`}
+                  }`}
               >
                 About
               </button>
