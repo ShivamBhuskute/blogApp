@@ -64,7 +64,7 @@ function AllPosts() {
   }, []);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <h1 className='font-bold text-2xl mt-10'>Loading...</h1>;
   }
 
   if (error) {
