@@ -13,10 +13,10 @@ function App() {
   const authStatus = useSelector((state) => state.auth.status);
 
   useEffect(() => {
-    if (!authStatus) {
-      setLoading(false);
-      return;
-    }
+    // if (!authStatus) {
+    //   setLoading(false);
+    //   return;
+    // }
     authService.getCurrentUser()
       .then((userData) => {
         if (userData) {
