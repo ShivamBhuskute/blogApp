@@ -4,6 +4,7 @@ import { Container, PostCard } from "../components";
 import { useSelector } from "react-redux";
 import authService from "../appwrite/auth";
 import { login, logout } from "../store/authSlice";
+import { useDispatch } from 'react-redux'
 
 function Home() {
     const [posts, setPosts] = useState([]);
