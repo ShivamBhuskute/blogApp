@@ -13,6 +13,16 @@ function Home() {
             setLoading(false);
             return;
         }
+        authService
+            .getCurrentUser()
+            .then((userData) => {
+                if (userData) {
+                    dispatch(login({ userData }));
+                } else {
+                    dispatch(logout());
+                }
+            })
+            .finally(() => setLoading(false));
         appwriteService.getPosts().then((posts) => {
             if (posts) {
                 setPosts(posts.documents);
