@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import appwriteService from "../appwrite/config";
 import { Container, PostCard } from "../components";
 import { useSelector } from "react-redux";
-import authService from "./appwrite/auth";
-import { login, logout } from "./store/authSlice";
+import authService from "../appwrite/auth";
+import { login, logout } from "../store/authSlice";
 
 function Home() {
     const [posts, setPosts] = useState([]);
